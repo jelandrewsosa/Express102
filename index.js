@@ -26,7 +26,7 @@ app.get("/users", (req, res) => {
 
 app.post("/users", (req, res) => {
   const details = req.body;
-  const email = req.body.email;
+  const {email} = req.body;
 
   if (!email.includes("@")) {
 
