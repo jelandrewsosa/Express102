@@ -14,10 +14,12 @@ app.get("/", (req, res) => {
 
 app.get("/users", (req, res) => {
   if (users.length === 0) {
+    
     return res.status(400).json({
       error: "Users is Empty",
     });
   } else {
+    
     return res.status(200).json(users);
   }
 });
