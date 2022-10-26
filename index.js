@@ -34,9 +34,9 @@ app.post("/users", (req, res) => {
       error: "Email Address is Invalid",
     });
   } else {
-    const findUser = users.find((user) => user.email === email);
+    const findEmail = users.find((user) => user.email === email);
 
-    if (findUser) {
+    if (findEmail) {
 
       return res.status(422).json({
         error: "Email Address already exist",
