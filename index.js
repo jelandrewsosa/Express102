@@ -36,7 +36,7 @@ app.post("/users", (req, res) => {
 
     if (findUser) {
 
-      return res.status(400).json({
+      return res.status(422).json({
         error: "Email Address already exist",
       });
     } else {
